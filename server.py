@@ -1,12 +1,11 @@
 from flask import Flask, render_template,url_for,redirect,request
 import csv
+import math
 app = Flask(__name__)
-
 
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/submit_form', methods = ['GET','POST'] )
 def submit():
@@ -40,3 +39,5 @@ def write_data_csv(data):
     with open('db.csv', 'a', newline='') as csvfile:
         db_writer = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
         db_writer.writerow([email,subject,message])
+
+app.run()
