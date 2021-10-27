@@ -55,7 +55,7 @@ template {
 }
 
 a {
-    background-color: transparent
+    background-color: coral;
 }
 
 a:active,
@@ -314,7 +314,7 @@ body {
     font-size: 11px;
     line-height: 1.78;
     color: #000;
-    background-color: #fff
+    background-color: red ;
 }
 
 button,
@@ -327,13 +327,13 @@ textarea {
 }
 
 a {
-    color: #001aff;
+    color: #001aff;  
     text-decoration: none
 }
 
 a:focus,
 a:hover {
-    color: #0012b3;
+    color: green;
     text-decoration: underline
 }
 
