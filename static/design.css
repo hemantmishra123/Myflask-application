@@ -55,7 +55,7 @@ template {
 }
 
 a {
-    background-color: coral;
+    background-color: transparent
 }
 
 a:active,
@@ -222,6 +222,31 @@ th {
     padding: 0
 }
 
+.formdesign {
+    font-size: 20px;
+}
+
+.formdesign input {
+    width: 50%;
+    padding: 12px 20px;
+    border: 1px solid blue;
+    margin: 14px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.formerror {
+    color: red;
+}
+
+.but {
+    border-radius: 9px;
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+    margin: 22px 20px;
+}
+
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 
@@ -314,7 +339,7 @@ body {
     font-size: 11px;
     line-height: 1.78;
     color: #000;
-    background-color: red ;
+    background-color: #fff
 }
 
 button,
@@ -327,13 +352,13 @@ textarea {
 }
 
 a {
-    color: #001aff;  
+    color: #001aff;
     text-decoration: none
 }
 
 a:focus,
 a:hover {
-    color: green;
+    color: #0012b3;
     text-decoration: underline
 }
 

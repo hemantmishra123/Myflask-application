@@ -22,6 +22,33 @@ def submit():
         message = "FORM NOT SUBMITTED"
         return render_template('thankyou.html',message=message)
 
+@app.route('/submit_data', methods = ['GET','POST'] )
+def function():
+    if request.method=="POST":
+        try:
+            data=request.form.to_dict()
+            data_csv(data)
+            message="Registration successfull"
+            return render_template('thankyou.html',message=message)
+        except:
+            message = "DID NOT SAVE DATA TO DATABASE."
+            return render_template('thankyou.html',message=message)
+    else:
+        message = "FORM NOT SUBMITTED"
+        return render_template('thankyou.html',message=message)
+
+def data_csv(data):
+    name=data['fname']
+    email=data['femail']
+    phone=data['fphone']
+    password=data['fpass']
+    cpass=data['fcpass']
+    with open('db.csv', 'a', newline='') as csvfile:
+        db_writer = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        db_writer.writerow([name,email,phone,password,cpass,])
+
+
+
 
 @app.route('/<string:page_name>')
 def page(page_name='/'):
