@@ -18,14 +18,15 @@
 
     <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/logo.png">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel = "stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}" >
 
-    <title>Waste Mangement</title>
+    <title>Enthusiastic Dreamer</title>
 
     <link href="./static/design.css" rel="stylesheet">
    
 </head>
 
-<body class="">
+<body class="bg-nav">
     <div id="site-border-left"></div>
     <div id="site-border-right"></div>
     <div id="site-border-top"></div>
@@ -75,32 +76,19 @@
                                         <a href="https://youtube.com/codebreakerstech" target="_blank" title="" class="black-image-project-hover">
                                             <img src="./static/assets/images/work02-hover.jpg" alt="" class="img-responsive">
                                         </a>
-                     <form action="/submit_data" method="post" class="reveal-content">
-
-                                    <div class="formdesign" id="name">
-            Name: <input type="text" name="fname" required><b><span class="formerror"> </span></b>
-        </div>
-
-        <div class="formdesign" id="email">
-            Email: <input type="email" name="femail" required><b><span class="formerror"> </span></b>
-        </div>
-
-        <div class="formdesign" id="phone">
-            Phone: <input type="phone" name="fphone" required><b><span class="formerror"></span></b>
-        </div>
-
-        <div class="formdesign" id="pass">
-            Password: <input type="password" name="fpass" required><b><span class="formerror"</span></b>
-        </div>
-
-        <div class="formdesign" id="cpass">
-            Confirm Password: <input type="password" name="fcpass" required><b><span class="formerror"></span></b>
-        </div>
-
-        <input class="but" type="submit" value="Submit">
-
+        <div class="card mt-100">
+        <div class="card-body">
+        <form action="/submit_data" method="post" class="reveal-content">
+           <input type="email" class="form-control",name="email"><br>
+          <label>password </label><br>
+          <input type="password" class="form-control",name="password"><br><br>
+          <input type="submit" class="btn btn-primary btn-block btn-lg" value="login">
+                                    
     </form>
-                                    </div>
+    <p> Not a member ? <a href="/signup">Create Account </a></p>
+    </div>
+    </div>
+        </div>
 
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1">
