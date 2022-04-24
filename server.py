@@ -86,4 +86,5 @@ def write_data_csv(data):
         db_writer = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
         db_writer.writerow([email,subject,message])
 
-app.run()
+if __name__ == "__main__":
+    app.run(debug=True, port=8000)
