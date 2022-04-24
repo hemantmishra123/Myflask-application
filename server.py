@@ -1,8 +1,8 @@
 from flask import Flask, render_template,url_for,redirect,request
 import csv
 import math
-import pandas as pd 
-import numpy as np
+#import pandas as pd 
+#mport numpy as np
 import sqlite3 
 app = Flask(__name__)
 #this is the database file.
